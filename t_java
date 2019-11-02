@@ -1,0 +1,25 @@
+#!/bin/bash
+echo "$(tput clear)$(tput setaf 4)"
+echo "          ========================================================"
+echo "$(tput bold)             WELCOME TO TERMINAL JAVA"
+echo "          ========================================================"
+echo -n "$(tput setaf 1)Enter the file location : " 
+file_loc=""
+read  file_loc
+#mkdir $file_loc
+cd $file_loc
+echo -n "$(tput setaf 1)Enter the java file name : "
+read file_name
+mkdir $file_name
+#eval $file_loc 
+for i in {1..10}
+do
+#mkdir .hello$i
+echo -n "="
+done
+javac $file_name.java
+java $file_name
+echo "$(tput clear)"
+echo "enter the name of the new .sh file"
+read new_file_name
+
